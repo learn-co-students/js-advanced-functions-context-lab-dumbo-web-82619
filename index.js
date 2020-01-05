@@ -48,15 +48,15 @@ function calculatePayroll(arr) {
 }
 
 function findEmployeeByFirstName(arr, name) {
-    return arr.find(record => record.firstName === name)
+  return arr.find(record => record.firstName === name)
 }
 
 let allWagesFor = function () {
-    let eligibleDates = this.timeInEvents.map(function (e) {
-      return e.date
-    })
-    let payable = eligibleDates.reduce(function (memo, d) {
-      return memo + wagesEarnedOnDate.call(this, d)
-    }.bind(this), 0)
-    return payable
-  }
+  let eligibleDates = this.timeInEvents.map(function (e) {
+    return e.date
+  })
+  let payable = eligibleDates.reduce(function (memo, d) {
+    return memo + wagesEarnedOnDate.call(this, d)
+  }.bind(this), 0)
+  return payable
+}
